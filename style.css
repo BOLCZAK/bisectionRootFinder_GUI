@@ -1,0 +1,13 @@
+/*QWidget{*/
+/*    background-color: green;*/
+/*}*/
+QPushButton#pushButtonCalculate{
+    background-color: red;
+    /*background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #9dd53a, stop: .5 #a1d54f, stop: .51 #173cc2, stop: 1 #0a37bc);*/
+}
+QPushButton#pushButtonCalculate:hover{
+    color: white;
+}
+/*QLabel#labelPodglad{*/
+/*    background-image: url("assets/wielomian_good.png");*/
+/*}*/

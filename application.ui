@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>760</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Witaj w programie do określania miejsc zerowych, wybierz interesujące ciebie opcje</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxFunkcje">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>200</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Funkcje</string>
+    </property>
+    <widget class="QRadioButton" name="radioButtonWielomian">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wielomian</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonTryg">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>120</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Trygonometryczna</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonWyk">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>120</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wykładnicza</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxMetoda">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>80</y>
+      <width>120</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Metoda</string>
+    </property>
+    <widget class="QRadioButton" name="radioButtonBisekcja">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bisekcja</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonSieczne">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sieczne</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxZakres">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>80</y>
+      <width>120</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Przedział</string>
+    </property>
+    <widget class="QLabel" name="labelPoczatekZakres">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Początek</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelKoniecZakres">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>67</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Koniec</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditStart">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Początek</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditEnd">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>87</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Koniec</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxEpsilon">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>80</y>
+      <width>120</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Dokładność</string>
+    </property>
+    <widget class="QLineEdit" name="lineEditEpsilon">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Epsilon</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxIteracje">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>155</y>
+      <width>120</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Ilość Iteracji</string>
+    </property>
+    <widget class="QLineEdit" name="lineEditIteracje">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Iteracje</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxStop">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>80</y>
+      <width>120</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Kryterium zatrzymania</string>
+    </property>
+    <widget class="QRadioButton" name="radioButtonEpsilon">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Epsilon</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonIteracje">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Liczba iteracji</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxPodglad">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>200</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Podgląd funkcji</string>
+    </property>
+    <widget class="QLabel" name="labelPodglad">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>180</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Placeholder dla podglądu</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxChoices">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>220</y>
+      <width>540</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Wybrane ustawienia</string>
+    </property>
+    <widget class="QLabel" name="labelChoices">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>17</y>
+       <width>520</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Placeholder dla wybranych ustawień</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButtonCalculate">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>760</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>DO IT</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>200</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Wyniki obliczeń</string>
+    </property>
+    <widget class="QLabel" name="labelZerowe">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Miejsce zerowe:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditZerowe">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>20</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditCzas">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>50</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCzas">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Czas [s]:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelIloscIteracji">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ilość iteracji:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditIloscIteracji">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>80</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditDokladnoscWynik">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>110</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelDokladnoscWynik">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dokładność:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonXValuesChange">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>180</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pokaż zmiany wartości X</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxchart">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>340</y>
+      <width>540</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Reprezentacja Graficzna</string>
+    </property>
+    <widget class="QLabel" name="labelGraph">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>214</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
